@@ -6,18 +6,6 @@ typealias IntegerTypes Union{IntTypes, UIntTypes}
 
 
 
-# export checked_abs
-#
-# checked_abs{T<:IntTypes}(x::T) =
-#     Base.llvmcall("""
-#         %ret = checked.abs %1
-#         return int %ret
-#         """, T, Tuple{T}, x)
-#
-# checked_abs{T<:UIntTypes}(x::T) = x
-
-
-
 # LLVM seems to ignore this
 export fast_assert
 function fast_assert(cond::Bool)
